@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enclosure</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
@@ -20,20 +21,32 @@
 
     <hr class="border-gray-200 mx-auto" />
 
-    <section class="flex flex-col items-center justify-center text-center py-32 px-4">
-        <h1 class="text-5xl font-bold leading-tight mb-6">Enclosure</h1>
-        <p class="text-lg text-gray-600 max-w-xl mb-8">
-                Make a case, get the case + get a pop socket (to stick on to your case), digital calipers (to measure stuff), or a microSD card (to store 3D files)!
-        </p>
-        <div class="flex gap-4 mb-4">
-                <a href="guide.html" class="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition">
-                    Get Started
-                </a>
-                <a href="FIXME" class="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition">
-                    Run a club meeting
-                </a>
+<section class="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-32 px-4 gap-12 max-w-6xl mx-auto">
+        <div class="flex-1">
+                <h1 class="text-5xl font-bold leading-tight mb-6">Enclosure</h1>
+                <p class="text-lg text-gray-600 max-w-xl mb-8">
+                        Make a case, get the case + get a pop socket (to stick on to your case), digital calipers (to measure stuff), or a microSD card (to store 3D files)!
+                </p>
+                <div class="flex gap-4 mb-4 justify-center md:justify-start">
+                        <a href="guide.html" class="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition">
+                                Get Started
+                        </a>
+                        <a href="FIXME" class="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition">
+                                Run a club meeting
+                        </a>
+                </div>
         </div>
-    </section>
+        <div class="flex-1 flex justify-center">
+                <model-viewer src="Phone Case.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" style="width: 40vw; height: 50vh;">
+                        <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                                View in your space
+                        </button>
+                </model-viewer>
+        </div>
+</section>
 
     <hr class="border-gray-200 mx-auto" />
 
@@ -53,8 +66,8 @@
                 <p class="text-gray-700">Anyone under the age of 19.</p>
         </div>
         <div>
-                <h3 class="text-xl font-semibold mb-2">How does fufillment take place?</h3>
-                <p class="text-gray-700">If you do not have a 3D printer, fufillment will happen through #printing-legion, a program where Hack Clubbers with a 3D printer ship you a case! Otherwise, you can print it yourself. </p>
+                <h3 class="text-xl font-semibold mb-2">How does fulfillment take place?</h3>
+                <p class="text-gray-700">If you do not have a 3D printer, fulfillment will happen through #printing-legion, a program where Hack Clubbers with a 3D printer ship you a case! Otherwise, you can print it yourself. </p>
         </div>
         <div>
                 <h3 class="text-xl font-semibold mb-2">I have more questions.</h3>
